@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D4993B6236221A50032B9CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4993B5236221A50032B9CF /* AppDelegate.swift */; };
+		3D4993B8236221A50032B9CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4993B7236221A50032B9CF /* SceneDelegate.swift */; };
+		3D4993BA236221A50032B9CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4993B9236221A50032B9CF /* ContentView.swift */; };
+		3D4993BC236221A90032B9CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4993BB236221A90032B9CF /* Assets.xcassets */; };
+		3D4993BF236221A90032B9CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4993BE236221A90032B9CF /* Preview Assets.xcassets */; };
+		3D4993C2236221A90032B9CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4993C0236221A90032B9CF /* LaunchScreen.storyboard */; };
+		3D4993CD236221AA0032B9CF /* TLSNetworkAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4993CC236221AA0032B9CF /* TLSNetworkAppTests.swift */; };
+		3D4993D8236221AA0032B9CF /* TLSNetworkAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4993D7236221AA0032B9CF /* TLSNetworkAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D4993C9236221AA0032B9CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D4993AA236221A50032B9CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D4993B1236221A50032B9CF;
+			remoteInfo = TLSNetworkApp;
+		};
+		3D4993D4236221AA0032B9CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D4993AA236221A50032B9CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D4993B1236221A50032B9CF;
+			remoteInfo = TLSNetworkApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D4993B2236221A50032B9CF /* TLSNetworkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TLSNetworkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D4993B5236221A50032B9CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3D4993B7236221A50032B9CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3D4993B9236221A50032B9CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3D4993BB236221A90032B9CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D4993BE236221A90032B9CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3D4993C1236221A90032B9CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3D4993C3236221A90032B9CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D4993C8236221AA0032B9CF /* TLSNetworkAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TLSNetworkAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D4993CC236221AA0032B9CF /* TLSNetworkAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLSNetworkAppTests.swift; sourceTree = "<group>"; };
+		3D4993CE236221AA0032B9CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D4993D3236221AA0032B9CF /* TLSNetworkAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TLSNetworkAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D4993D7236221AA0032B9CF /* TLSNetworkAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLSNetworkAppUITests.swift; sourceTree = "<group>"; };
+		3D4993D9236221AA0032B9CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D4993AF236221A50032B9CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4993C5236221AA0032B9CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4993D0236221AA0032B9CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D4993A9236221A50032B9CF = {
+			isa = PBXGroup;
+			children = (
+				3D4993B4236221A50032B9CF /* TLSNetworkApp */,
+				3D4993CB236221AA0032B9CF /* TLSNetworkAppTests */,
+				3D4993D6236221AA0032B9CF /* TLSNetworkAppUITests */,
+				3D4993B3236221A50032B9CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D4993B3236221A50032B9CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D4993B2236221A50032B9CF /* TLSNetworkApp.app */,
+				3D4993C8236221AA0032B9CF /* TLSNetworkAppTests.xctest */,
+				3D4993D3236221AA0032B9CF /* TLSNetworkAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D4993B4236221A50032B9CF /* TLSNetworkApp */ = {
+			isa = PBXGroup;
+			children = (
+				3D4993B5236221A50032B9CF /* AppDelegate.swift */,
+				3D4993B7236221A50032B9CF /* SceneDelegate.swift */,
+				3D4993B9236221A50032B9CF /* ContentView.swift */,
+				3D4993BB236221A90032B9CF /* Assets.xcassets */,
+				3D4993C0236221A90032B9CF /* LaunchScreen.storyboard */,
+				3D4993C3236221A90032B9CF /* Info.plist */,
+				3D4993BD236221A90032B9CF /* Preview Content */,
+			);
+			path = TLSNetworkApp;
+			sourceTree = "<group>";
+		};
+		3D4993BD236221A90032B9CF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3D4993BE236221A90032B9CF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3D4993CB236221AA0032B9CF /* TLSNetworkAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D4993CC236221AA0032B9CF /* TLSNetworkAppTests.swift */,
+				3D4993CE236221AA0032B9CF /* Info.plist */,
+			);
+			path = TLSNetworkAppTests;
+			sourceTree = "<group>";
+		};
+		3D4993D6236221AA0032B9CF /* TLSNetworkAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3D4993D7236221AA0032B9CF /* TLSNetworkAppUITests.swift */,
+				3D4993D9236221AA0032B9CF /* Info.plist */,
+			);
+			path = TLSNetworkAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D4993B1236221A50032B9CF /* TLSNetworkApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D4993DC236221AA0032B9CF /* Build configuration list for PBXNativeTarget "TLSNetworkApp" */;
+			buildPhases = (
+				3D4993AE236221A50032B9CF /* Sources */,
+				3D4993AF236221A50032B9CF /* Frameworks */,
+				3D4993B0236221A50032B9CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TLSNetworkApp;
+			productName = TLSNetworkApp;
+			productReference = 3D4993B2236221A50032B9CF /* TLSNetworkApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D4993C7236221AA0032B9CF /* TLSNetworkAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D4993DF236221AA0032B9CF /* Build configuration list for PBXNativeTarget "TLSNetworkAppTests" */;
+			buildPhases = (
+				3D4993C4236221AA0032B9CF /* Sources */,
+				3D4993C5236221AA0032B9CF /* Frameworks */,
+				3D4993C6236221AA0032B9CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D4993CA236221AA0032B9CF /* PBXTargetDependency */,
+			);
+			name = TLSNetworkAppTests;
+			productName = TLSNetworkAppTests;
+			productReference = 3D4993C8236221AA0032B9CF /* TLSNetworkAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3D4993D2236221AA0032B9CF /* TLSNetworkAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D4993E2236221AA0032B9CF /* Build configuration list for PBXNativeTarget "TLSNetworkAppUITests" */;
+			buildPhases = (
+				3D4993CF236221AA0032B9CF /* Sources */,
+				3D4993D0236221AA0032B9CF /* Frameworks */,
+				3D4993D1236221AA0032B9CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D4993D5236221AA0032B9CF /* PBXTargetDependency */,
+			);
+			name = TLSNetworkAppUITests;
+			productName = TLSNetworkAppUITests;
+			productReference = 3D4993D3236221AA0032B9CF /* TLSNetworkAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D4993AA236221A50032B9CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Ian Campbell";
+				TargetAttributes = {
+					3D4993B1236221A50032B9CF = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					3D4993C7236221AA0032B9CF = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 3D4993B1236221A50032B9CF;
+					};
+					3D4993D2236221AA0032B9CF = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 3D4993B1236221A50032B9CF;
+					};
+				};
+			};
+			buildConfigurationList = 3D4993AD236221A50032B9CF /* Build configuration list for PBXProject "TLSNetworkApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D4993A9236221A50032B9CF;
+			productRefGroup = 3D4993B3236221A50032B9CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D4993B1236221A50032B9CF /* TLSNetworkApp */,
+				3D4993C7236221AA0032B9CF /* TLSNetworkAppTests */,
+				3D4993D2236221AA0032B9CF /* TLSNetworkAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D4993B0236221A50032B9CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4993C2236221A90032B9CF /* LaunchScreen.storyboard in Resources */,
+				3D4993BF236221A90032B9CF /* Preview Assets.xcassets in Resources */,
+				3D4993BC236221A90032B9CF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4993C6236221AA0032B9CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4993D1236221AA0032B9CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D4993AE236221A50032B9CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4993B6236221A50032B9CF /* AppDelegate.swift in Sources */,
+				3D4993B8236221A50032B9CF /* SceneDelegate.swift in Sources */,
+				3D4993BA236221A50032B9CF /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4993C4236221AA0032B9CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4993CD236221AA0032B9CF /* TLSNetworkAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4993CF236221AA0032B9CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4993D8236221AA0032B9CF /* TLSNetworkAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D4993CA236221AA0032B9CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D4993B1236221A50032B9CF /* TLSNetworkApp */;
+			targetProxy = 3D4993C9236221AA0032B9CF /* PBXContainerItemProxy */;
+		};
+		3D4993D5236221AA0032B9CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D4993B1236221A50032B9CF /* TLSNetworkApp */;
+			targetProxy = 3D4993D4236221AA0032B9CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3D4993C0236221A90032B9CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D4993C1236221A90032B9CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D4993DA236221AA0032B9CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D4993DB236221AA0032B9CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D4993DD236221AA0032B9CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TLSNetworkApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 24952W3W82;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TLSNetworkApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.shockerentertainment.TLSNetworkApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D4993DE236221AA0032B9CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TLSNetworkApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 24952W3W82;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TLSNetworkApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.shockerentertainment.TLSNetworkApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3D4993E0236221AA0032B9CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24952W3W82;
+				INFOPLIST_FILE = TLSNetworkAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.shockerentertainment.TLSNetworkAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TLSNetworkApp.app/TLSNetworkApp";
+			};
+			name = Debug;
+		};
+		3D4993E1236221AA0032B9CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24952W3W82;
+				INFOPLIST_FILE = TLSNetworkAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.shockerentertainment.TLSNetworkAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TLSNetworkApp.app/TLSNetworkApp";
+			};
+			name = Release;
+		};
+		3D4993E3236221AA0032B9CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24952W3W82;
+				INFOPLIST_FILE = TLSNetworkAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.shockerentertainment.TLSNetworkAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TLSNetworkApp;
+			};
+			name = Debug;
+		};
+		3D4993E4236221AA0032B9CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24952W3W82;
+				INFOPLIST_FILE = TLSNetworkAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.shockerentertainment.TLSNetworkAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TLSNetworkApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D4993AD236221A50032B9CF /* Build configuration list for PBXProject "TLSNetworkApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D4993DA236221AA0032B9CF /* Debug */,
+				3D4993DB236221AA0032B9CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D4993DC236221AA0032B9CF /* Build configuration list for PBXNativeTarget "TLSNetworkApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D4993DD236221AA0032B9CF /* Debug */,
+				3D4993DE236221AA0032B9CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D4993DF236221AA0032B9CF /* Build configuration list for PBXNativeTarget "TLSNetworkAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D4993E0236221AA0032B9CF /* Debug */,
+				3D4993E1236221AA0032B9CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D4993E2236221AA0032B9CF /* Build configuration list for PBXNativeTarget "TLSNetworkAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D4993E3236221AA0032B9CF /* Debug */,
+				3D4993E4236221AA0032B9CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D4993AA236221A50032B9CF /* Project object */;
+}
