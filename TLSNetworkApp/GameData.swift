@@ -10,6 +10,8 @@ import Foundation
 
 class GameData {
     
+    static let NO_GAME = GameData(maxPlayers: 0, maxMove: 0, gameBoardSize: 0)
+    
     //MARK: Properties
     var playerNames = [String]()
     var playerIDs = [UInt8]()
@@ -35,6 +37,10 @@ class GameData {
         // Set initial GameState
         gameState = WaitingForPlayers()
         
+    }
+    
+    func gameBoardSizeInt () -> Int {
+        return 10
     }
     
     // MARK: Delegate Functions

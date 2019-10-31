@@ -113,11 +113,11 @@
 				3D8E1751236261CA0092A2DB /* WaitingOnOpponentView.swift */,
 				3D8E1755236268870092A2DB /* GameProtocol.swift */,
 				3D8E1753236267A40092A2DB /* GameData.swift */,
+				3D8E17572363A70F0092A2DB /* GameSession.swift */,
 				3D4993BB236221A90032B9CF /* Assets.xcassets */,
 				3D4993C0236221A90032B9CF /* LaunchScreen.storyboard */,
 				3D4993C3236221A90032B9CF /* Info.plist */,
 				3D4993BD236221A90032B9CF /* Preview Content */,
-				3D8E17572363A70F0092A2DB /* GameSession.swift */,
 			);
 			path = TLSNetworkApp;
 			sourceTree = "<group>";

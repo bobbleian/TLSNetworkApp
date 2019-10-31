@@ -16,48 +16,52 @@ import CryptoKit
 class GameSession : ObservableObject {
     @Published var playerName: String
     @Published var userID: UInt8 = 255
-    @Published var gameData: GameData? = nil
-    var connection: NWConnection
+    @Published var gameData: GameData
+    var connection: NWConnection?
     
-    init (playerName: String) {
-        self.playerName = playerName
-        
-
+    func startTLSConnection() {
         let tcpOptions = NWProtocolTCP.Options()
         tcpOptions.enableKeepalive = true
         tcpOptions.keepaliveIdle = 2
-
+        
         let tlsOptions = NWProtocolTLS.Options()
-
+        
         sec_protocol_options_set_min_tls_protocol_version(tlsOptions.securityProtocolOptions, .TLSv12)
         sec_protocol_options_set_max_tls_protocol_version(tlsOptions.securityProtocolOptions, .TLSv12)
-
+        
         // Create parameters with custom TLS and TCP options.
         let tlsParameters = NWParameters(tls: tlsOptions, tcp: tcpOptions)
-
+        
         tlsParameters.includePeerToPeer = true
-
+        
         // Add your custom game protocol to support game messages.
         let gameOptions = NWProtocolFramer.Options(definition: GameProtocol.definition)
         tlsParameters.defaultProtocolStack.applicationProtocols.insert(gameOptions, at: 0)
-
-        connection = NWConnection(host: "localhost", port: 9797, using: tlsParameters)
-
-        connection.stateUpdateHandler = { newState in
-            switch newState {
-            case .ready:
-                print("\(self.connection) established")
-
-                // When the connection is ready, start receiving messages.
-                self.receiveNextMessage(connection: self.connection)
-
-            default:
-                break
-            }
-        }
-
-        connection.start(queue: DispatchQueue(label: "tls"))
         
+        connection = NWConnection(host: "localhost", port: 9797, using: tlsParameters)
+        
+        if let connection = connection {
+            connection.stateUpdateHandler = { newState in
+                switch newState {
+                case .ready:
+                    print("\(connection) established")
+                    
+                    // When the connection is ready, start receiving messages.
+                    self.receiveNextMessage(connection: connection)
+                    
+                default:
+                    break
+                }
+            }
+            
+            //connection.start(queue: DispatchQueue(label: "tls"))
+            connection.start(queue: DispatchQueue.main)
+        }
+    }
+    
+    init (playerName: String) {
+        self.playerName = playerName
+        self.gameData = GameData.NO_GAME
     }
     
 
@@ -99,7 +103,7 @@ class GameSession : ObservableObject {
             let playerName = String(decoding: content.subdata(in: 1..<content.count), as: UTF8.self)
             print("Add Player Message: playerID=\(playerID); playerName=\(playerName)")
             
-            if let gameData = gameData {
+            if gameData !== GameData.NO_GAME {
                 gameData.addPlayer(playerID: playerID, playerName: playerName)
             }
             
@@ -111,9 +115,8 @@ class GameSession : ObservableObject {
             let playerID = content[0];
             print("Set Active Player Message: playerID=\(playerID)")
             
-            if let gameData = gameData {
+            if gameData !== GameData.NO_GAME {
                 gameData.setActivePlayer(playerID: playerID)
-                self.objectWillChange.receive(on: RunLoop.main)
             }
 
         case .GAME_DATA:
@@ -129,6 +132,7 @@ class GameSession : ObservableObject {
             print("Game Data Message: maxPlayers=\(gameDataMaxPlayers); maxMove=\(gameDataMaxMove); gameBoardSize=\(gameDataGameBoardSize)")
             
             gameData = GameData(maxPlayers: gameDataMaxPlayers, maxMove: gameDataMaxMove, gameBoardSize: gameDataGameBoardSize)
+            
         case .MOVE_PLAYER:
             /*
              MOVE PLAYER Message
@@ -139,8 +143,9 @@ class GameSession : ObservableObject {
             let playerMove = content[1];
             print("Move Player Message: playerID=\(playerID), playerMove=\(playerMove)")
             
-            if let gameData = gameData {
+            if gameData !== GameData.NO_GAME {
                 gameData.movePlayer(playerID: playerID, playerMove: playerMove)
+                objectWillChange.send()
             }
         default:
             print("Unknown message type")
@@ -161,6 +166,35 @@ class GameSession : ObservableObject {
 
         // Send the application content along with the message.
         connection.send(content: userName.data(using: .utf8), contentContext: context, isComplete: true, completion: .idempotent)
+    }
+
+    // Handle sending a "Player Move" message.
+    static func sendPlayerMove(_ playerMove: UInt8, connection: NWConnection?) {
+        guard let connection = connection else {
+            return
+        }
+
+        // Create a message object to hold the command type.
+        let message = NWProtocolFramer.Message(gameMessageType: .PLAYER_MOVE)
+        let context = NWConnection.ContentContext(identifier: "Player Move",
+                                                  metadata: [message])
+        
+        var content = Data()
+        content.append(playerMove)
+
+        // Send the application content along with the message.
+        connection.send(content: content, contentContext: context, isComplete: true, completion: .idempotent)
+    }
+    
+    static func testGameSession() -> GameSession {
+        let gameSession = GameSession(playerName: "Jackson Chan")
+        gameSession.userID = 1
+        gameSession.gameData = GameData(maxPlayers: 2, maxMove: 3, gameBoardSize: 10)
+        gameSession.gameData.addPlayer(playerID: 1, playerName: "Jackson Chan")
+        gameSession.gameData.addPlayer(playerID: 0, playerName: "Benny Boi")
+        gameSession.gameData.movePlayer(playerID: 0, playerMove: 3)
+        gameSession.gameData.movePlayer(playerID: 1, playerMove: 2)
+        return gameSession
     }
     
 }
