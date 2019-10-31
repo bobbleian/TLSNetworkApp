@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct WaitingOnOpponentView: View {
+struct GamePlayView: View {
     
     @EnvironmentObject var gameSession: GameSession
     
@@ -92,7 +92,7 @@ func getBoardEmoji(_ playerID: UInt8) -> String {
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        WaitingOnOpponentView()
+        GamePlayView()
             .environmentObject(GameSession.testGameSession())
     }
 }

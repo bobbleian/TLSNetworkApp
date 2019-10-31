@@ -20,7 +20,7 @@ struct ContentView: View {
                 TextField("Enter Your Name", text: $gameSession.playerName)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .multilineTextAlignment(.center)
-                NavigationLink(destination: WaitingOnOpponentView(), tag: 1, selection: $selection) {
+                NavigationLink(destination: GamePlayView(), tag: 1, selection: $selection) {
                     Button("Start Game") {
                         GameSession.sendUserName(self.$gameSession.playerName.wrappedValue, connection: self.$gameSession.connection.wrappedValue)
                         
