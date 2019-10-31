@@ -63,6 +63,15 @@ class GameData {
     func isGameOver () -> Bool {
         return gameState.isGameOver()
     }
+    
+    // Get Active Player Name
+    func getActivePlayerName () -> String {
+        let activeIndex = playerIDs.firstIndex(of: activePlayer)
+        if let activeIndex = activeIndex {
+            return playerNames[activeIndex]
+        }
+        return ""
+    }
 }
 
 // MARK: Game State Protocol Definition

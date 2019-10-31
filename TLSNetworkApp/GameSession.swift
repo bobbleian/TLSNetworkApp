@@ -188,7 +188,7 @@ class GameSession : ObservableObject {
     
     static func testGameSession() -> GameSession {
         let gameSession = GameSession(playerName: "Jackson Chan")
-        gameSession.userID = 1
+        gameSession.userID = 0
         gameSession.gameData = GameData(maxPlayers: 2, maxMove: 3, gameBoardSize: 10)
         gameSession.gameData.addPlayer(playerID: 1, playerName: "Jackson Chan")
         gameSession.gameData.addPlayer(playerID: 0, playerName: "Benny Boi")

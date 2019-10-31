@@ -14,57 +14,48 @@ struct WaitingOnOpponentView: View {
     
     var body: some View {
         VStack {
+            Spacer()
             HStack {
-                Text("Your Name:")
                 Text("\(gameSession.playerName)")
+                    .font(.headline)
             }
-            HStack {
-                Text("PlayerID:")
-                Text("\(gameSession.userID)")
-            }
-//            HStack {
-//                ForEach(gameSession.gameData.gameBoard, id: \.self) { playerID in
-//                    Text(getBoardEmoji(playerID))
-////                    Circle()
-////                        .fill(getBoardColor(playerID))
-////                        .frame(width: 10, height: 10, alignment: .center)
-//                }
-//            }
-            HStack {
-                GameBoardView()
-            }
-            HStack {
-                Text("Active Player:")
-                Text("\(gameSession.gameData.activePlayer)")
-            }
-            HStack {
-                Text("Game Board Total:")
-                Text("\(gameSession.gameData.gameBoard.count)")
-            }
+            Spacer()
+            GameBoardView()
+            Spacer()
 
             VStack {
                 if gameSession.gameData.isGameOver() {
-                    HStack {
+                    VStack {
                         Text("Game Over!!")
                         Button("Play Again") { }
                         Button("Quit") { }
-                    }
+                    }.frame(height: 50.0)
                 } else if gameSession.userID == gameSession.gameData.activePlayer {
                     HStack {
-                        Button("Move 1") {
-                         GameSession.sendPlayerMove(1, connection: self.$gameSession.connection.wrappedValue)
+                        Button(action: { GameSession.sendPlayerMove(1, connection: self.$gameSession.connection.wrappedValue) }) {
+                            Text("1")
+                                .frame(width: 50.0, height: 50.0)
+                            .background(Circle()
+                                .fill(Color.yellow))
                         }
-                        Button("Move 2") {
-                         GameSession.sendPlayerMove(2, connection: self.$gameSession.connection.wrappedValue)
+                        Button(action: { GameSession.sendPlayerMove(2, connection: self.$gameSession.connection.wrappedValue) }) {
+                            Text("2")
+                                .frame(width: 50.0, height: 50.0)
+                            .background(Circle()
+                                .fill(Color.yellow))
                         }
-                        Button("Move 3") {
-                         GameSession.sendPlayerMove(3, connection: self.$gameSession.connection.wrappedValue)
+                        Button(action: { GameSession.sendPlayerMove(3, connection: self.$gameSession.connection.wrappedValue) }) {
+                            Text("3")
+                                .frame(width: 50.0, height: 50.0)
+                            .background(Circle()
+                                .fill(Color.yellow))
                         }
-                    }
+                    }.frame(height: 50.0)
                 } else {
-                    Text("Waiting for other player's move...")
+                    Text("Waiting for  " + gameSession.gameData.getActivePlayerName() + "...").frame(height: 50.0)
                 }
             }
+            
         }
     }
 }
@@ -73,7 +64,7 @@ func getBackgroundColor (playerID: UInt8,  gameData: GameData) -> Color {
     if gameData.isGameOver() {
         return playerID == gameData.activePlayer ? Color.red : Color.green
     }
-    return Color.white
+    return Color.gray
 }
 
 func getBoardColor(_ playerID: UInt8) -> Color {
@@ -109,14 +100,16 @@ struct SwiftUIView_Previews: PreviewProvider {
 struct GameBoardView: View {
     @EnvironmentObject var gameSession: GameSession
     var body: some View {
-        ForEach(0..<gameSession.gameData.gameBoardSizeInt(), id: \.self) {position in
-            Text(position < self.gameSession.gameData.gameBoard.count ?
-                getBoardEmoji(self.gameSession.gameData.gameBoard[position]) :
-                //"X" :
-                "")
-                .frame(width: 30.0, height: 30.0)
-                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-                .background(getBackgroundColor(playerID: self.gameSession.userID, gameData: self.gameSession.gameData))
+        HStack {
+            ForEach(0..<gameSession.gameData.gameBoardSizeInt(), id: \.self) {position in
+                Text(position < self.gameSession.gameData.gameBoard.count ?
+                    getBoardEmoji(self.gameSession.gameData.gameBoard[position]) :
+                    //"X" :
+                    "")
+                    .frame(width: 30.0, height: 30.0)
+                    .background(Circle()
+                        .fill(getBackgroundColor(playerID: self.gameSession.userID, gameData: self.gameSession.gameData)))
+            }
         }
     }
 }
