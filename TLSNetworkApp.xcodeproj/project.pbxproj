@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D4993B6236221A50032B9CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4993B5236221A50032B9CF /* AppDelegate.swift */; };
 		3D4993B8236221A50032B9CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4993B7236221A50032B9CF /* SceneDelegate.swift */; };
-		3D4993BA236221A50032B9CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4993B9236221A50032B9CF /* ContentView.swift */; };
+		3D4993BA236221A50032B9CF /* ChooseNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4993B9236221A50032B9CF /* ChooseNameView.swift */; };
 		3D4993BC236221A90032B9CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4993BB236221A90032B9CF /* Assets.xcassets */; };
 		3D4993BF236221A90032B9CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4993BE236221A90032B9CF /* Preview Assets.xcassets */; };
 		3D4993C2236221A90032B9CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4993C0236221A90032B9CF /* LaunchScreen.storyboard */; };
@@ -42,7 +42,7 @@
 		3D4993B2236221A50032B9CF /* TLSNetworkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TLSNetworkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4993B5236221A50032B9CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D4993B7236221A50032B9CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3D4993B9236221A50032B9CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3D4993B9236221A50032B9CF /* ChooseNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseNameView.swift; sourceTree = "<group>"; };
 		3D4993BB236221A90032B9CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D4993BE236221A90032B9CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D4993C1236221A90032B9CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 			children = (
 				3D4993B5236221A50032B9CF /* AppDelegate.swift */,
 				3D4993B7236221A50032B9CF /* SceneDelegate.swift */,
-				3D4993B9236221A50032B9CF /* ContentView.swift */,
+				3D4993B9236221A50032B9CF /* ChooseNameView.swift */,
 				3D8E1751236261CA0092A2DB /* GamePlayView.swift */,
 				3D8E1755236268870092A2DB /* GameProtocol.swift */,
 				3D8E1753236267A40092A2DB /* GameData.swift */,
@@ -284,7 +284,7 @@
 				3D4993B8236221A50032B9CF /* SceneDelegate.swift in Sources */,
 				3D8E1752236261CA0092A2DB /* GamePlayView.swift in Sources */,
 				3D8E17582363A70F0092A2DB /* GameSession.swift in Sources */,
-				3D4993BA236221A50032B9CF /* ContentView.swift in Sources */,
+				3D4993BA236221A50032B9CF /* ChooseNameView.swift in Sources */,
 				3D8E1756236268870092A2DB /* GameProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

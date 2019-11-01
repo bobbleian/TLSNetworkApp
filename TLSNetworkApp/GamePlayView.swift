@@ -27,8 +27,14 @@ struct GamePlayView: View {
                 if gameSession.gameData.isGameOver() {
                     VStack {
                         Text("Game Over!!")
-                        Button("Play Again") { }
-                        Button("Quit") { }
+                        if gameSession.gameData.restartIDs.count == 0 {
+                            Button("Play Again") {
+                                GameSession.sendRestartGame(connection: self.$gameSession.connection.wrappedValue)
+                            }
+                        } else {
+                            Text("Waiting for other players to restart")
+                        }
+                        Button("Quit") { GameSession.sendEndGame(connection: self.$gameSession.connection.wrappedValue) }
                     }.frame(height: 50.0)
                 } else if gameSession.userID == gameSession.gameData.activePlayer {
                     HStack {

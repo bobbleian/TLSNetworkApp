@@ -20,6 +20,12 @@ class GameSession : ObservableObject {
     var connection: NWConnection?
     
     func startTLSConnection() {
+        
+        // Only run if no connection established
+        guard connection == nil else {
+            return
+        }
+        
         let tcpOptions = NWProtocolTCP.Options()
         tcpOptions.enableKeepalive = true
         tcpOptions.keepaliveIdle = 2
@@ -38,7 +44,7 @@ class GameSession : ObservableObject {
         let gameOptions = NWProtocolFramer.Options(definition: GameProtocol.definition)
         tlsParameters.defaultProtocolStack.applicationProtocols.insert(gameOptions, at: 0)
         
-        connection = NWConnection(host: "localhost", port: 9797, using: tlsParameters)
+        connection = NWConnection(host: "192.168.7.67", port: 9797, using: tlsParameters)
         
         if let connection = connection {
             connection.stateUpdateHandler = { newState in
@@ -105,6 +111,7 @@ class GameSession : ObservableObject {
             
             if gameData !== GameData.NO_GAME {
                 gameData.addPlayer(playerID: playerID, playerName: playerName)
+                objectWillChange.send()
             }
             
         case .SET_ACTIVE_PLAYER:
@@ -184,6 +191,37 @@ class GameSession : ObservableObject {
 
         // Send the application content along with the message.
         connection.send(content: content, contentContext: context, isComplete: true, completion: .idempotent)
+    }
+    
+    // Handle sending a "Resart Game" message.
+    static func sendRestartGame(connection: NWConnection?) {
+        guard let connection = connection else {
+            return
+        }
+
+        // Create a message object to hold the command type.
+        let message = NWProtocolFramer.Message(gameMessageType: .RESTART_GAME)
+        let context = NWConnection.ContentContext(identifier: "Restart Game",
+                                                  metadata: [message])
+
+        // Send the application content along with the message.
+        connection.send(content: Data(), contentContext: context, isComplete: true, completion: .idempotent)
+    }
+    
+    
+    // Handle sending a "End Game" message.
+    static func sendEndGame(connection: NWConnection?) {
+        guard let connection = connection else {
+            return
+        }
+
+        // Create a message object to hold the command type.
+        let message = NWProtocolFramer.Message(gameMessageType: .END_GAME)
+        let context = NWConnection.ContentContext(identifier: "End Game",
+                                                  metadata: [message])
+
+        // Send the application content along with the message.
+        connection.send(content: Data(), contentContext: context, isComplete: true, completion: .idempotent)
     }
     
     static func testGameSession() -> GameSession {
